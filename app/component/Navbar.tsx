@@ -1,33 +1,60 @@
-import React from "react"
+"use client";
+import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import logo2 from '@/app/assets/rian.png';
 
-export default function Navbar () {
+const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
+
     return (
-        <div className="bg-gray-500">
-            <nav className="flex items-center justify-between p-5 lg:px-6" aria-label="Global">
-                <div className="flex lg:flex-1">
-                    <a href="#" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Your Company</span> 
-                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""></img>
-                    </a>
+        <header className="bg-gradient-to-r from-[#384B70] via-[#507687] to-[#767573] sticky top-0 z-50">
+            <nav className="max-w-[1600px] lg:mx-auto flex items-center justify-between px-2 py-1">
+                <div className="flex items-center">
+                    <Link href="/">
+                        <Image 
+                            src={logo2} 
+                            alt={"Rian"} 
+                            width={70} 
+                            height={60} 
+                            className="rounded-full p-2 transition-transform duration-300 transform hover:scale-110" 
+                        />
+                    </Link>
                 </div>
-                <div className="flex lg:hidden">
-                    <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
-                        <span className="sr-only">Open main menu</span>
-                        <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+
+                {/* Hamburger menu for small screens */}
+                <div className="lg:hidden">
+                    <button onClick={toggleMenu} className="text-white focus:outline-none">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                         </svg>
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-12 text-center">  
-                    <a href="#" className="text-1xl font-semibold leading-6 text-gray-800">Home</a>
-                    <a href="#" className="text-1xl font-semibold leading-6 text-gray-800">Services</a>
-                    <a href="#" className="text-1xl font-semibold leading-6 text-gray-800">About Me</a>
-                    <a href="#" className="text-1xl font-semibold leading-6 text-gray-800">Contact</a>
-                </div>
-                <div className="hidden lg:flex lg:flex-1 lg:justify-end rounded-sm " >
-                    <a href="#" className="text-sm font-semibold leading-6 text-gray-800 " > Log in <span aria-hidden="true">&rarr;</span></a>
+
+                {/* Main Navigation for Large Screens */}
+                <div className="hidden lg:flex lg:flex-row lg:gap-5 pr-2">
+                    <Link href="/" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Home</Link>
+                    <Link href="/About" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">About</Link>
+                    <Link href="/Education" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Education</Link>
+                    <Link href="/Experience" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Experience</Link>
                 </div>
             </nav>
-        </div>
-    )
-}
+
+            {/* Mobile Menu */}
+            <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden` } >
+                <div className="flex flex-col gap-4 items-start bg-[#165051] py-4 bg-gradient-to-r from-[#384B70] via-[#507687] to-[#767573]">
+                    <Link href="/" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Home</Link>
+                    <Link href="/About" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">About</Link>
+                    <Link href="/Education" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Education</Link>
+                    <Link href="/Experience" className="text-[#fefefe] transition-transform duration-300 transform hover:scale-125 font-semibold">Experience</Link>
+                </div>
+            </div>
+        </header>
+    );
+};
+
+export default Navbar;
