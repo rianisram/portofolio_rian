@@ -47,7 +47,7 @@ export default function Footers() {
                         </li>
                         <li>
                             <a
-                                href="https://wa.me/08812205618"
+                                href="https://wa.me/628812205618"
                                 rel="noreferrer"
                                 target="_blank"
                                 className="text-[#ecf2f2] transition hover:opacity-75"
@@ -70,7 +70,7 @@ export default function Footers() {
                 >
                 </div>
 
-                <p className="text-xs text-[#ecf2f2]">&copy; 2024. Rian Isramdani. All rights reserved.</p>
+                <p className="text-xs text-[#ecf2f2]">&copy; 2024. Rian Isramdani.</p>
             </div>
         </footer>
     );
