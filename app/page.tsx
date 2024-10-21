@@ -3,6 +3,9 @@ import Card from "./component/Card";
 import Hero from "./component/Hero";
 import Navbar from "./component/Navbar";
 import Footers from "./component/Footers";
+import Belajar from "./component/Belajar"
+import Pengalaman from "./component/Pengalaman"
+
 
 export default function HomePage() {
   return (
@@ -11,6 +14,8 @@ export default function HomePage() {
       <Hero />
       <About />
       <Card />
+      <Belajar />
+      <Pengalaman />
       <Footers />
     </div>
   )

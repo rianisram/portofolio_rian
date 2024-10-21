@@ -25,7 +25,7 @@ export default function Card() {
             <Image src={rian3} alt={"rian"} width={385} height={150} className="transition-transform duration-300 transform hover:scale-105 " />
             <div className="px-6 py-6">
                 <div className="text-gray-400 text-base">
-                    <h1 className="font-bold text-2xl">Eperience</h1>
+                    <h1 className="font-bold text-2xl">Experience</h1>
                     <p>Experience is the best moment in life. This is my experience while working.</p>
                 </div>
             </div>

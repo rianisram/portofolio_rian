@@ -12,7 +12,7 @@ export default function Experience() {
             <div className="min-h-screen flex flex-col items-center bg-gradient-to-t from-[#6a87c1] via-[#7da2b3] to-[#f3f2f2]">
                 <div className="w-full flex justify-center items-center p-6">
                     <h1 className="font-extrabold text-5xl flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#384B70] via-[#507687] to-[#767573] mb-6">My</h1>
-                    <h1 className="font-extrabold text-5xl flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#384B70] via-[#507687] to-[#767573] mb-6">Experience</h1>
+                    <h2 className="font-extrabold text-5xl flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#384B70] via-[#507687] to-[#767573] mb-6">Experience</h2>
                 </div>
                 <div className="flex flex-col items-center w-full max-w-5xl p-6 space-y-16">
 
