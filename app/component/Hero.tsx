@@ -1,9 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Image from "next/image";
-import rian2 from '@/app/assets/rian1.jpeg';
-
 const Hero = () => {
     useEffect(() => {
         function typeEffect(element: HTMLElement, speed: number) {
@@ -49,6 +46,16 @@ const Hero = () => {
                         but I also have web creation skills. I also learned about Photoshop to create promotional posts.
                     </p>
                 </div>
+            </div>
+            <div className="flex items-center justify-center">
+
+            <button
+                onClick={() => window.open('/Rian_isramdani_Cv.pdf', '_blank')}
+                className="text-[#feffff] font-bold py-4 px-8 rounded mt-4 transition-transform duration-300 
+                transform hover:scale-105 bg-gradient-to-t from-[#294b47] via-[#2b98a4] to-[#403e3e] "
+                >
+                Download CV
+              </button>
             </div>
         </div>
     );

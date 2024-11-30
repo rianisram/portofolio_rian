@@ -15,7 +15,7 @@ const Navbar = () => {
             <nav className="max-w-[1600px] lg:mx-auto flex items-center justify-between px-5 py-5">
                 <div className="flex items-center">
                 <h1 className="font-extrabold text-1xl sm:text-4xl md:text-2xl flex justify-center bg-clip-text text-transparent bg-gradient-to-r from-[#e4e4e6] via-[#2d5b70] to-[#a39f97] mb-1 sm:mb-1 gap-3">
-                Rian <span className="text-[#c4c1c1]">Isramdani</span>
+                <span className="text-[#c4c1c1]"><Link href="/"> Rian Isramdani</Link></span>
             </h1>
                 </div>
 

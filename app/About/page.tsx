@@ -3,7 +3,7 @@
 import Navbar from "../component/Navbar";
 import rian2 from "@/app/assets/rian (1).png";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect,} from "react";
 import Footers from "../component/Footers";
 
 const About = () => {
@@ -33,7 +33,9 @@ const About = () => {
     } else {
       console.error("Element with class 'typing-effect' not found");
     }
+    
   }, []);
+
 
   return (
     <>
